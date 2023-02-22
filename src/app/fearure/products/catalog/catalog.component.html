@@ -1,0 +1,18 @@
+
+<div class="block-collection overflow-hidden mb-5">
+  <h2 class="text-center text-center-md text-center-sm mt-5 pt-5 fw-bold">Наши чайные коллекции</h2>
+  <div class="tea-collection row pt-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
+    <div class="col" *ngFor="let product of products">
+      <div class="card mb-3">
+        <a class="card-popup" [href]="product.image">
+          <img [src]="product.image" class="card-img-top">
+        </a>
+        <div class="card-body overflow-auto vh-100">
+          <h5 class="card-title fw-bold">{{product.title}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <a class="btn btn-primary" [routerLink]="['/catalog', product.id]" >Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container p-5">
+  <div class="product-card d-flex flex-column align-items-center justify-content-center vh-100">
+    <div class="product-title mb-3">
+      <p>{{products.title}}</p>
+    </div>
+    <div class="product-image mt-5 mb-5">
+      <img src="{{products.image}}">
+    </div>
+    <div class="block-product d-flex flex-column align-items-center mt-2 overflow-auto vh-100">
+      <div class="product-price text-center font-weight-bold">{{products.price}} руб.</div>
+      <div class="product-description text-xl-center mt-2">
+        <p>{{products.description}}</p>
+      </div>
+      <button class="btn btn-primary btn-lg" (click)="byProduct()" >Купить</button>
+    </div>
+  </div>
+</div>
+
+

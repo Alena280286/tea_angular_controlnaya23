@@ -1,0 +1,104 @@
+
+<div class="container vh-100">
+  <div class="form">
+    <h2 class="text-form text-center my-5 fw-bold">Сделать заказ</h2>
+    <div class="row">
+      <div class="col-lg-6 m-auto" id="form" [formGroup]="form">
+
+        <div class="row g-2 mb-3">
+          <div class="col-sm-6">
+            <label>Товар</label>
+            <input id="product" type="text" class="form-control"
+                   formControlName="product"
+                   placeholder=" ">
+          </div>
+          <div class="col-sm-6">
+            <label>Комментарий к заказу</label>
+            <input id="comment" type="text" class="form-control"
+                   formControlName="comment"
+                   placeholder=" ">
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-sm-4">
+            <label>Имя</label>
+            <input id="name" type="text" class="form-control"
+                   formControlName="name"
+                   placeholder="" required>
+            <div class="invalid-feedback"
+                 *ngIf="name?.invalid && (name?.touched || name?.dirty) && name?.errors?.['required']">
+              В поле «Имя» можно вводить только буквы
+            </div>
+          </div>
+          <div class="col-sm">
+            <label>Фамилия</label>
+            <input id="last_name" type="text" class="form-control"
+                   formControlName="last_name"
+                   placeholder="" required>
+            <div class="invalid-feedback"
+                 *ngIf="lastName?.invalid && (lastName?.touched || lastName?.dirty) && lastName?.errors?.['required']">
+              В поле «Фамилия» можно вводить только буквы
+            </div>
+          </div>
+          <div class="col-sm">
+            <label>Телефон</label>
+            <input id="phone" type="text" class="form-control"
+                   formControlName="phone"
+                   placeholder=" " required>
+            <div class="invalid-feedback"
+                 *ngIf="phone?.invalid && (phone?.touched || phone?.dirty) && phone?.errors?.['required']">
+              В поле «Телефон» можно вводить только цифры и знак +
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-2 mb-3">
+          <div class="col-sm-6">
+            <label>Страна</label>
+            <input id="country" type="text" class="form-control"
+                   formControlName="country"
+                   placeholder=" " required>
+          </div>
+          <div class="col-sm-6">
+            <label>Индекс</label>
+            <input id="zip" type="text" class="form-control"
+                   formControlName="zip"
+                   placeholder=" " required>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-sm-12">
+            <label>Адрес</label>
+            <input id="address" type="text" class="form-control"
+                   formControlName="address"
+                   placeholder=" " required>
+            <div class="invalid-feedback"
+                 *ngIf="address?.invalid && (address?.touched || address?.dirty) && address?.errors?.['required']">
+              В поле «Адрес» можно вводить: буквы, цифры, пробелы, дефис и слэш
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" id="btn" class="btn btn-primary hvr-float-shadow mb-5" (click)="acceptData()"
+                  [disabled]="form.invalid || form.disabled">
+            Отправить
+          </button>
+          <div class="invalid-feedback mt-2 mb-5 d-none">
+            Произошла ошибка. Попробуйте еще раз.
+          </div>
+        </div>
+      </div>
+
+      <div class=" mb-5 d-none " id="form-open">
+        <div class="form align-items-center p-3 bg-white mw-100">
+          <div class="text-center fw-bold fs-4 my-5 py-5 justify-content-center">"Спасибо за заказ. Мы свяжемся с вами в ближайшее время!"
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,49 @@
+.block-answer{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.ui-corner-top{
+  border-radius: 10px;
+}
+.ui-widget-content{
+  border: none;
+}
+.ui-state-active .ui-icon, .ui-button:active .ui-icon{
+  background-image: url("/assets/images/vectordown.svg");
+}
+.ui-icon, .ui-widget-content .ui-icon{
+  background-image: url("/assets/images/vectorup.svg");
+}
+
+.ui-icon-triangle-1-s{
+  background-position: 0;
+}
+
+.ui-accordion-header-icon{
+  background-position: center;
+  color: white;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+//.modal.open{
+//  display: block;
+//}
+
+@media screen and (max-width: 385px) {
+  .ui-accordion-header-icon{
+    display: none;
+  }
+}
+
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+.dark-modal .close {
+  color: white;
+}
+.light-blue-backdrop {
+  background-color: #5cb3fd;
+}
